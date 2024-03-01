@@ -4,6 +4,11 @@ using ATVO.ThemeEditor.ThemeModels;
 using ATVO.ThemeEditor.Scripting.DotNET;
 using System.Windows.Media;
 
+//This script should be bound to the 'overridefontcolor' of a label. It doesn't require a specific binding,
+//but ATVO may require a bind of some sort anyway, so just pass in shortname or something.
+
+//Script determines the luminance value of a color (obtained from the Background COLOR /not image/ of the parent label
+//then decides whether white or black font would show better.
 namespace Scripts
 {
 	public class opposingFontColorCheck : IScript
