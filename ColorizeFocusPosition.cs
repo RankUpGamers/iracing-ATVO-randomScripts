@@ -10,6 +10,9 @@ using System.Runtime.InteropServices;
 
 namespace Scripts
 {
+	//This script is for overriding text font color to show blue when the driver is the focus of the camera in sim
+	//and gray when they've finished, or white for everyone else.
+	
 	public class ColorizeFocusPosition : IScript
 	{
 
