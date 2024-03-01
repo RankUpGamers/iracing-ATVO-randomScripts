@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using ATVO.ThemeEditor.Data;
 namespace Scripts
 {
+	//This is wrote quick-and-dirty. Looks at the dropdown called nameMode and attempts to resolve it 
+	//and return a string in that format.
 	public enum NameFormats {Full, Short, Last, Team};
 	public class DriverNameFormat : IScript
 	{
@@ -22,6 +24,8 @@ namespace Scripts
 
 			// Find the dropdown and the index of the selected item
 			var dropdown = (Dropdown) item.Theme.Dropdowns.Find("nameMode");
+   			if(dropdown == null)
+      				return null;
 			var selectedIndex = dropdown.Items.IndexOf(dropdown.SelectedItem);
 
 
