@@ -1,14 +1,21 @@
+/*
+	Author: Dustin Ollis
+	File: opposingFontColorCheck.cs
+	Bindings: none, this script goes in "Override Text Color" 
+		I have occationally had to bind something random in the past to get the script to run. Haven't tested the best option for this.
+
+	Usage: Set this to a label's "Override Text Color" and it will inspect the background and choose white/black text color based on the calculated luminance value.
+
+	Returns: Color object representing black or white text.
+*/
+
+
 using System;
 using ATVO.ThemesSDK;
 using ATVO.ThemeEditor.ThemeModels;
 using ATVO.ThemeEditor.Scripting.DotNET;
 using System.Windows.Media;
 
-//This script should be bound to the 'overridefontcolor' of a label. It doesn't require a specific binding,
-//but ATVO may require a bind of some sort anyway, so just pass in shortname or something.
-
-//Script determines the luminance value of a color (obtained from the Background COLOR /not image/ of the parent label
-//then decides whether white or black font would show better.
 namespace Scripts
 {
 	public class opposingFontColorCheck : IScript

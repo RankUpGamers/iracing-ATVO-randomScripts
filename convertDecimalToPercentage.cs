@@ -1,3 +1,16 @@
+/*
+	Author: Dustin Ollis
+	File: convertDecimalToPercentage.cs
+	Bindings: any decimal
+
+	Usage: Takes in any binding (that is a number) and attempts to turn it into a percentage. If you pass something that isn't a number, your script WILL return an error. 
+
+
+
+	Returns: Formatted string representing the percentage-value of a decimal object.
+*/
+
+
 using System;
 using ATVO.ThemesSDK;
 using ATVO.ThemeEditor.ThemeModels;
@@ -19,7 +32,7 @@ namespace Scripts
 				nfi.PercentDecimalDigits = 0;
 				return valueDec.ToString("P", nfi);
 			}
-			return "0";
+			return "0%";
 		}
 		
 	}

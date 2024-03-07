@@ -1,3 +1,14 @@
+/*
+	Author: Dustin Ollis
+	File: ColorizeFocusPosition.cs
+	Bindings: EntitySessionResult
+
+	Usage: Set as OverrideFontColor and pass in EntitySessionResult. When the car is the focus of the camera, the text will turn blue. When they finish the race it will turn gray. Otherwise, it will be white.
+
+	Returns: Color for the font.
+
+*/
+
 using System;
 using ATVO.ThemesSDK;
 using ATVO.ThemeEditor.ThemeModels;
@@ -10,9 +21,7 @@ using System.Runtime.InteropServices;
 
 namespace Scripts
 {
-	//This script is for overriding text font color to show blue when the driver is the focus of the camera in sim
-	//and gray when they've finished, or white for everyone else.
-	
+
 	public class ColorizeFocusPosition : IScript
 	{
 

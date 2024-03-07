@@ -1,3 +1,15 @@
+/*
+	Author: Dustin Ollis
+	File: weatherFriendlyText.cs
+	Bindings: none. A binding may be required to get this to update with the sim weather. Send in track temp or something similar. Still testing this.
+
+	Usage: Gives you a 'friendly' string representing the current weather. Includes support for rain.
+
+	Known Errors: VSCode will often report sim.Telemetry.Precipitation as 'not included in ISimulation, but it does in fact work post-tempest. version stable 1.52.0.0
+
+	Returns: Formatted string representing the current weather, or Unknown if the sim is not returning telemetry.
+*/
+
 using System;
 using ATVO.ThemesSDK;
 using ATVO.ThemeEditor.ThemeModels;
@@ -36,7 +48,7 @@ namespace Scripts
 				else 
 					return "Overcast";
  			} 
-			return "Overcast";
+			return "Unknown";
 		}
 	}
 }

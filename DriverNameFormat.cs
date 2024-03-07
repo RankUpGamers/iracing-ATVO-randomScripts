@@ -1,3 +1,18 @@
+/*
+	Author: Dustin Ollis
+	File: DriverNameFormat.cs
+	Bindings: entity_object
+
+	Usage: Set label to pass entity_object and use this script as the data converter. Requires a dropdown to select which format to use. The dropdown is to be named 'nameMode' Capitalization is IMPORTANT.
+
+		nameMode options: Full Name, Short Name, Last Name, Team Name. The specific text isn't important, but the order is always the same.
+		Action when Any is selected: none
+		Action when specific is selected: none
+
+	Returns: Formatted String representing NAME of the entity. 
+*/
+
+
 #nullable enable
 using System;
 using ATVO.ThemesSDK;
@@ -10,8 +25,6 @@ using System.Collections.Generic;
 using ATVO.ThemeEditor.Data;
 namespace Scripts
 {
-	//This is wrote quick-and-dirty. Looks at the dropdown called nameMode and attempts to resolve it 
-	//and return a string in that format.
 	public enum NameFormats {Full, Short, Last, Team};
 	public class DriverNameFormat : IScript
 	{
